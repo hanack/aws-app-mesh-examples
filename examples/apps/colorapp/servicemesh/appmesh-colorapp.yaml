@@ -124,11 +124,7 @@ Resources:
         HttpRoute:
           Action:
             WeightedTargets:
-              - VirtualNode: colorteller-white-vn
-                Weight: 1
-              - VirtualNode: colorteller-blue-vn
-                Weight: 1
-              - VirtualNode: colorteller-red-vn
+              - VirtualNode: colorteller-black-vn
                 Weight: 1
           Match:
             Prefix: "/"
