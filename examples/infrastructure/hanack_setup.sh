@@ -46,7 +46,7 @@ echo "Push der docker images ins Repo"
 #${DIR}/../apps/colorapp/ecs/ecs-colorapp.sh
 
 export colorapp=$(aws cloudformation describe-stacks --stack-name=$ENVIRONMENT_NAME-ecs-colorapp --query="Stacks[0].Outputs[?OutputKey=='ColorAppEndpoint'].OutputValue" --output=text); echo $colorapp
-curl $colorapp/color
+curl --header "b: b" $colorapp/color
 
 #ecs-cli local up --task-def-file task-definition.json
 #ecs-cli local up --task-def-compose docker-compose.ecs-local.yml
